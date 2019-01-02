@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'febsky'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repository.apache.org/snapshots' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+//    compile 'org.bouncycastle:bcprov-jdk15on:1.49'
+
+}
